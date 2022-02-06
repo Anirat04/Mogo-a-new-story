@@ -1,0 +1,398 @@
+/* === table of content start === */
+/*
+    1. font immport
+    2. commmon css
+    3. heading css
+    4. menu css
+    5. banner css
+    6. about_us css
+    7.
+    8.
+    9.
+    10.
+    11.
+    12.
+    13.
+    14.
+    15.
+    16.
+    17.
+    18.
+    19.
+    20.
+
+ */
+/* === table of content end === */
+
+/* font import start */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+/* font import end */
+
+
+/* common css start */
+:root{
+    --hf: 'Kaushan Script', cursive;
+    --hf2: 'Montserrat', sans-serif;
+    --pf: 'Roboto', sans-serif;
+    --pcl: #95e1d3;
+    --scl: #f38181;
+    --ycl: #fce38a;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.clr{
+    clear: both;
+}
+
+.full-wrapper{
+    width: 100%;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* common css end */
+
+/* heading css start */
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333333;
+}
+
+.heading h3{
+    font-family: var(--hf);
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.heading h2{
+    font-family: var(--hf2);
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.heading h2::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: var(--scl);
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* heading css end */
+
+/* menu start */
+
+.menu-bg{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99999;
+}
+.menu-bg .menu{
+    display: flex;
+    padding-top: 40px;
+}
+
+.menu-bg .menu .menu-logo{
+    flex-basis: 580px;
+}
+
+.menu-bg .menu .menu-logo img{
+    padding-left: 20px;
+}
+
+.menu-bg .menu .menu-item{
+    flex-basis: 620px;
+}
+
+.menu-bg .menu .menu-item ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-bg .menu .menu-item ul li a{
+    font-family: var(--hf2);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    transition: all linear 0.4s;
+}
+
+.menu-bg .menu .menu-item ul li a:hover{
+    color: var(--ycl);
+}
+
+.menu-bg .menu .menu-item ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: var(--ycl);
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    transition: all linear 0.4s;
+}
+
+.menu-bg .menu .menu-item ul li a:hover::after{
+    color: var(--ycl);
+    width: 100%;
+}
+
+.menu-bg .menu .menu-item ul .active{
+    color: var(--ycl);
+}
+
+.menu-bg .menu .menu-item ul .active::after{
+    width: 100%;
+}
+/* menu end */
+
+/* banner css start */
+.banner-bg{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 86px;
+}
+
+.banner-bg .bg1{
+    background: url(../images/banner-1.jpg) no-repeat center/cover;
+    padding-top: 246px;
+    padding-bottom: 230px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-bg .bg2{
+    background: url(../images/banner-2.jpg) no-repeat center/cover;
+    padding-top: 246px;
+    padding-bottom: 230px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-bg .banner-slider .item-1 .banner-text .overlay::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.84);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.banner-bg .banner-slider .item-1 .banner-text .overlayG::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.84), rgba(243, 129, 129, 0.84));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.banner-bg .banner-slider h3{
+    font-family: var(--hf);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 26px;
+}
+
+.banner-bg .banner-slider h1{
+    font-family: var(--hf2);
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+
+.banner-bg .banner-slider h1::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #ffffff;
+    display: flex;
+    margin-top: 96px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.banner-bg .banner-slider a{
+    font-family: var(--hf2);
+    font-size: 14pxpx;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 3px solid;
+    padding: 8px 21px;
+    display: inline-block;
+    transition: all linear 0.4s;
+}
+
+.banner-bg .banner-slider a:hover{
+    color: var(--ycl);
+}
+
+.banner-bg .banner-slider .bg2 a:hover{
+    color: var(--scl);
+}
+
+.banner-slider .slick-dots{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 92px;
+}
+
+.banner-slider .slick-dots li{
+    float: left;
+    margin: 0 5px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.banner-slider .slick-dots button{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.banner-slider .slick-dots li.slick-active button{
+    background-color: #ff2828;
+}
+/* banner css end */
+
+/* about_us css start */
+.about-bg .about .about-text p{
+    font-family: var(--pf);
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    text-align: center;
+    margin: 0 120px;
+    line-height: 24px;
+    padding-top: 76px;
+    padding-bottom: 100px;
+}
+
+.about-bg .about .about-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-bg .about .about-content .item{
+    width: 380px;
+    height: 252px;
+    position: relative;
+}
+
+.about-bg .about .about-content .item img{
+    width: 380px;
+    height: 252px;
+}
+
+.about-bg .about .about-content .item .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.81);
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+.about-bg .about .about-content .item:hover .overlay{
+    opacity: 1;
+}
+
+.about-bg .about .about-content .item .overlay .icon a{
+    display: block;
+    color: #ffffff;
+    font-family: var(--hf2);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/* about_us css end */
+
+/* counter css start */
+.counter-bg{
+    width: 100%;
+    height: 270px;
+    background-color: var(--pcl);
+}
+
+.counter-bg .counter{
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+}
+
+.counter-bg .counter .content{
+    height: 90px;
+}
+
+.counter-bg .counter .content{
+    /* display: flex; */
+}
+
+.counter-bg .counter ul{
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.counter-bg .counter ul li h3{
+    font-family: var(--hf2);
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.counter-bg .counter ul li p{
+    font-family: var(--hf2);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+/* counter css end */
